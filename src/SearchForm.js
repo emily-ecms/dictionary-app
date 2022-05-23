@@ -9,15 +9,10 @@ export default function SearchForm() {
         console.log(response.data);
     }
 
-    function handleAPICall(word) {
-        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-        axios.get(apiUrl).then(displayResult);
-    }
-
     function searchWord(event) {
         event.preventDefault();
-        alert(`You searched for "${word}"`);
-        handleAPICall(word);
+        let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+        axios.get(apiUrl).then(displayResult);
     }
 
     function saveWord(event) {
