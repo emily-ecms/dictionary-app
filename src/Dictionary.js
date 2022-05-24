@@ -8,8 +8,8 @@ export default function SearchForm() {
     const [results, setResults] = useState(null);
 
     function getResults(response) {
-        console.log(response.data[0]);
-        //console.log(response.data[0].meanings[0].definitions[0]);
+        //console.log(response.data[0]);
+        console.log(response.data[0].meanings[0].definitions[0]);
         setResults(response.data[0]);
     }
 

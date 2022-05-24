@@ -1,6 +1,8 @@
 import React from "react";
+import Meaning from "./Meaning";
+import "./Results.css";
 
-export default function Definitions(props) {
+export default function Results(props) {
     //console.log(`You searched for "${props.results.word}"`);
     //let definitions = props.results.meanings[0].definitions[0].definition;
     //console.log(definitions);
@@ -8,8 +10,17 @@ export default function Definitions(props) {
     
     if(props.results) {
     return (
-        <div>
-        <h2>Definition of "{props.results.word}"</h2>
+        <div className="Results">
+        <h2 className="word">{props.results.word}</h2>
+        <p>
+            {props.results.meanings.map(function (meaning, index) {
+                return(
+                    <div key={index}>
+                        <Meaning meaning={meaning} />
+                    </div>
+                )
+            })}
+        </p>
        
         </div>
     )
