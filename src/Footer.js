@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <p className="Footer mt-5">
             <a
-            href="https://github.com/emily-ecms/weather-react-app" 
+            href="https://github.com/emily-ecms/dictionary-app" 
             target="_blank" 
             rel="noreferrer"> 
             Open Sourced Code
