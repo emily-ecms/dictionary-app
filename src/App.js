@@ -1,5 +1,6 @@
 import './App.css';
-import SearchForm from "./SearchForm";
+import Dictionary from "./Dictionary";
+
 import Footer from "./Footer";
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Dictionary App</h1>
-        <SearchForm />
+        <Dictionary />
+       
         <Footer />
       </header>
     </div>
