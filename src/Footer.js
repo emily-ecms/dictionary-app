@@ -8,7 +8,7 @@ export default function Footer() {
             target="_blank" 
             rel="noreferrer"> 
             Open Sourced Code
-            </a> by Emily Sleightholme, hosted on <a href="https://merry-alpaca-9ec632.netlify.app/" 
+            </a> by Emily Sleightholme, hosted on <a href="https://glowing-stroopwafel-7d6c07.netlify.app/" 
             target="_blank" 
             rel="noreferrer"> Netlify </a>
         </p>
