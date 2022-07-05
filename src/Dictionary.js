@@ -38,9 +38,9 @@ export default function SearchForm() {
             Suggested words: sunset, wine, yoga, plant...
         </div>
         </section>
-        <section>
+        
          <Results results={results} />
-         </section>
+         
          </div>
     )
 }
