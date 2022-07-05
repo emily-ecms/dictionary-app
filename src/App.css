@@ -5,3 +5,11 @@
 .App-link {
   color: #61dafb;
 }
+
+section {
+  border: 1px solid blue;
+  background-color: lemonchiffon;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
