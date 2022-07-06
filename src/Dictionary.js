@@ -41,7 +41,7 @@ export default function Dictionary(props) {
         <div className="Dictionary">
         <section>
         <form className="SearchForm" onSubmit={handleSubmit}>
-            <input type="search" placeholder="Search for a word" onChange={saveWord}></input>
+            <input type="search" placeholder="Search for a word" onChange={saveWord} defaultValue={props.defaultWord}></input>
             <button className="btn btn-primary rounded">Search</button>
         </form>
         <div className="hint">

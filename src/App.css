@@ -17,3 +17,8 @@ section {
 .examples {
   opacity: 0.6;
 }
+
+.App .App-header {
+  font-size: 24px;
+  color: blue;
+}

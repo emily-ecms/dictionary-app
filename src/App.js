@@ -7,10 +7,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Dictionary App</h1>
-        <Dictionary defaultWord="dictionary" />
-        <Footer />
+        <h1>What word do you want to look up?</h1>
+        
       </header>
+      <Dictionary defaultWord="dictionary" />
+        <Footer />
     </div>
   );
 }

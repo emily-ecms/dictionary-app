@@ -1,5 +1,7 @@
-.Meaning h3 {
+.Definition h3 {
     text-decoration: underline;
     text-align: left;
     padding-left: 50px;
+    color: red;
+    
 }
