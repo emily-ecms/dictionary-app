@@ -4,9 +4,10 @@ import "./App.css";
 import axios from "axios";
 import Results from "./Results";
 
-export default function SearchForm() {
-    const [word, setWord] = useState("");
-    const [results, setResults] = useState(null);
+export default function Dictionary(props) {
+    let [word, setWord] = useState(props.defaultWord);
+    let [results, setResults] = useState(null);
+    let [loaded, setLoaded] = useState(false);
 
     function getResults(response) {
         //console.log(response.data[0]);
@@ -14,23 +15,32 @@ export default function SearchForm() {
         setResults(response.data[0]);
     }
 
-    function searchWord(event) {
-        event.preventDefault();
-
-        // documentation: https://dictionaryapi.dev/
-
+    function search() {
+         // documentation: https://dictionaryapi.dev/
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
         axios.get(apiUrl).then(getResults);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        search();
     }
 
     function saveWord(event) {
         setWord(event.target.value);
     }
 
+    function load() {
+        setLoaded(true);
+        search();
+    }
+
+    if(loaded) {
+
     return (
         <div className="Dictionary">
         <section>
-        <form className="SearchForm" onSubmit={searchWord}>
+        <form className="SearchForm" onSubmit={handleSubmit}>
             <input type="search" placeholder="Search for a word" onChange={saveWord}></input>
             <button className="btn btn-primary rounded">Search</button>
         </form>
@@ -43,4 +53,7 @@ export default function SearchForm() {
          
          </div>
     )
+    } else {
+        load();
+    }
 }
